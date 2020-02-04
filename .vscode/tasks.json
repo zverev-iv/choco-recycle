@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build package",
+            "dependsOrder": "sequence",
+            "type": "shell",
+            "windows": {
+                "command": "build-package.cmd"
+              },
+              "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

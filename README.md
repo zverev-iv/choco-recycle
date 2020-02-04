@@ -1,7 +1,7 @@
 # choco-recycle
 Chocolatey package for recycle http://ss64.net/westlake/xp/index.html
 
-original text of license:
+original text of license for utility:
 
 ```txt
 Unrestricted License

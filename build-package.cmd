@@ -1,0 +1,1 @@
+choco pack recycle\recycle.nuspec
