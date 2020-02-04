@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>recycle</id>
+    <version>3.00</version>
+    <packageSourceUrl>https://github.com/zverev-iv/choco-recycle</packageSourceUrl>
+    <owners>zverev-iv</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>recycle (Install)</title>
+    <authors>Frank P. Westlake</authors>
+    <projectUrl>http://ss64.net/westlake/xp/index.html</projectUrl>
+    <copyright>2009 Frank P.Westlake</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>-->
+    <tags>recycle recyclebin</tags>
+    <summary>Send files to, restore files from, and list files in the Recycle Bin.</summary>
+    <description>_RECYCLE [OPTIONS] [FILE or FILES  [NEW FILENAME]]
+
+OPTIONS:
+ /D    Delete an item from the Recycle Bin (Windows NT and later).
+ /E    Empty all recycle bins (/E) or an individual bin (i.e. /E:D).
+ /F    Force recycle of read-only files. Default is to skip.
+ /H /? Print command line usage information.
+ /L    List contents of recycle bins.
+ /N    Non-Unicode output to files and pipes. Default is Unicode.
+ /O    Overwrite files if they already exist. Default is to skip the file.
+ /P    If recycling, prompt the user to recycle each file. If undeleting, prompt the user
+       to overwrite existing files. Default is to skip the file if one exists at the
+       location.
+ /R    Rename a file in the Recycle Bin. Specify current name and full path for new name
+       (Windows NT and later).
+ /Q    Query individual drives (i.e. /Q:C) or all drives individually (/Q).
+ /U    Undelete files from the Recycle Bin. A new drive:\path\name may be specified.
+
+It is important that full paths be specified for the new name when renaming and when
+undeleting to a new location. Rename operations write the new filename to a Recycle Bin
+control file.
+
+EXAMPLES:
+Recycle all files and folders in C:\TEMP:
+  RECYCLE C:\TEMP\*
+
+List all DOC files which were recycled from any directory on the C: drive:
+  RECYCLE /L C:\*.DOC
+
+Restore all DOC files which were recycled from any directory on the C:
+drive:
+  RECYCLE /U C:\*.DOC
+
+Restore C:\temp\junk.txt to C:\docs\resume.txt:
+  RECYCLE /U "C:\temp\junk.txt" "C:\docs\resume.txt"
+
+Rename in place C:\etc\config.cfg to C:\archive\config.2007.cfg:
+  RECYCLE /R "C:\etc\config.cfg" "C:\archive\config.2007.cfg"
+  </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
