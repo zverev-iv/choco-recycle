@@ -4,7 +4,7 @@ branches:
   only:
   - master
 script:
-- build-package.cmd
+- ./build-package.cmd
 after_script:
 - choco apikey --key $CHOCOAPIKEY --source https://push.chocolatey.org/
 - choco push
